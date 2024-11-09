@@ -8,8 +8,9 @@ const fetchUsers = async () => {
 
 export default function UseExample() {
   const userPromise = fetchUsers();
+
   return (
-    <Suspense>
+    <Suspense fallback="Loading...">
       <UserComponent userPromise={userPromise} />
     </Suspense>
   );

@@ -18,13 +18,13 @@ async function myAction(_previousState: string | null, formData: FormData) {
 export default function ActionStateExample() {
   return (
     <div className="w-1/2">
-      <CartItem title="Jake" value={"jake"} />
-      <CartItem title="Holly" value={"holly"} />
+      <ListItem title="Jake" value={"jake"} />
+      <ListItem title="Holly" value={"holly"} />
     </div>
   );
 }
 
-const CartItem = ({ title, value }: { title: string; value: string }) => {
+const ListItem = ({ title, value }: { title: string; value: string }) => {
   const [message, formAction, isPending] = useActionState(myAction, null);
   return (
     <form action={formAction}>
