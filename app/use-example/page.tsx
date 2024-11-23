@@ -7,10 +7,12 @@ const fetchUsers = async () => {
 };
 
 export default function UseExample() {
+  console.log("HELLO");
   const userPromise = fetchUsers();
 
   return (
     <Suspense fallback="Loading...">
+      <button onClick={() => console.log()}>Hello</button>
       <UserComponent userPromise={userPromise} />
     </Suspense>
   );

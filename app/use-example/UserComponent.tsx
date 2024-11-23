@@ -3,6 +3,7 @@
 import { use, useEffect, useState } from "react";
 
 export default function UserComponent({ userPromise }: any) {
+  console.log("HEELLO2");
   const [shouldRender, setShouldRender] = useState(false);
   const users: any = shouldRender ? use(userPromise) : null;
 
